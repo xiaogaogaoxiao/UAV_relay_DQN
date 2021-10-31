@@ -1,0 +1,32 @@
+ Reward_ave = mean(Reward,1);
+Reward_phc_ave = mean(Reward_phc,1);
+Reward_Q_ave = mean(Reward_Q,1);
+Reward_DQN_ave = mean(Reward_DQN,1);
+BER_ave = mean(BER,1);
+BER_ave_phc = mean(BER_phc,1);
+BER_ave_Q = mean(BER_Q,1);
+BER_ave_DQN = mean(BER_DQN,1);
+x = 1:1500;
+subplot(1,2,1)
+plot(x,Reward_ave)
+hold on
+plot(x,Reward_phc_ave)
+plot(x,Reward_Q_ave)
+plot(x,Reward_DQN_ave)
+subplot(1,2,2)
+plot(x,BER_ave)
+hold on
+plot(x,BER_ave_phc)
+plot(x,BER_ave_Q)
+plot(x,BER_ave_DQN)
+>> subplot(1,2,1)
+>> xlabel('slot')
+>> ylabel('utility')
+>> legend('Hotbooting-PHC','PHC','Q-learning','DQN')
+>> subplot(1,2,2)
+>> xlabel('slot')
+>> ylabel('BER')
+>> legend('Hotbooting-PHC','PHC','Q-learning','DQN')
+>> grid on;set(gca,'GridLineStyle',':','GridColor','k','GridAlpha',1)
+>> subplot(1,2,1)
+>> grid on;set(gca,'GridLineStyle',':','GridColor','k','GridAlpha',1)
